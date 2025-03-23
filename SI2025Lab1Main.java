@@ -124,14 +124,20 @@ class TaskManager {
 
     // 1. Remove a task by name
     public void removeTask(String name) {
-        // TODO: Implement removal logic
+task.removeIf(task -> task.name.equals((name));        // TODO: Implement removal logic
     }
 
     // 2. Find all completed tasks
     public List<Task> getCompletedTasks() {
-        // TODO: Implement logic to return completed tasks
-        return new ArrayList<>();
+        ArrayList<Task> completedTasks = new ArrayList<>();
+        for (Task task : tasks) {
+            if (task.isCompleted) {
+                completedTasks.add(task);
+            }
+        }
+        return completedTasks;
     }
+
 
     // 3. List tasks sorted by name
     public void sortTasksByName() {
@@ -174,6 +180,14 @@ class TaskManager {
     // 9. Mark all tasks in a category as completed
     public void markCategoryCompleted(String category) {
         // TODO: Implement bulk completion logic
+    }
+ public void markTaskCompleted(String name) {
+        for (Task task : tasks) {
+            if (task.name.equals(name)) {
+                task.markAsCompleted();
+                break;
+            }
+        }
     }
 }
 
