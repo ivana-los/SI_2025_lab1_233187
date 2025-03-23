@@ -129,9 +129,15 @@ task.removeIf(task -> task.name.equals((name));        // TODO: Implement remova
 
     // 2. Find all completed tasks
     public List<Task> getCompletedTasks() {
-        // TODO: Implement logic to return completed tasks
-        return new ArrayList<>();
+        ArrayList<Task> completedTasks = new ArrayList<>();
+        for (Task task : tasks) {
+            if (task.isCompleted) {
+                completedTasks.add(task);
+            }
+        }
+        return completedTasks;
     }
+
 
     // 3. List tasks sorted by name
     public void sortTasksByName() {
@@ -170,6 +176,14 @@ task.removeIf(task -> task.name.equals((name));        // TODO: Implement remova
     public void markCategoryCompleted(String category) {
         // TODO: Implement bulk completion logic
     }
+ public void markTaskCompleted(String name) {
+        for (Task task : tasks) {
+            if (task.name.equals(name)) {
+                task.markAsCompleted();
+                break;
+            }
+        }
+    }
 }
 
 public class SI2025Lab1Main {
@@ -178,7 +192,7 @@ public class SI2025Lab1Main {
         manager.addTask("Write report", Priority.HIGH, "Work");
         manager.addTask("Submit assignment", Priority.MEDIUM, "School");
         manager.addTask("Buy groceries", Priority.LOW, "Personal");
-manager.removeTask("Write report");
+
         // MISSING: Calls to the new methods that will be implemented
 
         manager.printTasks();
