@@ -163,7 +163,12 @@ class TaskManager {
 
     // 8. Mark a task as completed by name
     public void markTaskCompleted(String name) {
-        // TODO: Implement completion logic
+        for (Task task : tasks) {
+            if (task.name.equals(name)) {
+                task.markAsCompleted();
+                break;
+            }
+        }
     }
 
     // 9. Mark all tasks in a category as completed
@@ -179,7 +184,7 @@ public class SI2025Lab1Main {
         manager.addTask("Submit assignment", Priority.MEDIUM, "School");
         manager.addTask("Buy groceries", Priority.LOW, "Personal");
 
-        // MISSING: Calls to the new methods that will be implemented
+     manager.markTaskCompleted("Write report");   // MISSING: Calls to the new methods that will be implemented
 
         manager.printTasks();
     }
