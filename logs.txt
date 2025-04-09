@@ -1,0 +1,15 @@
+*   5e119f1 (HEAD -> master, origin/master, origin/HEAD) Merge branch 'master' of https://github.com/ivana-los/SI_2025_lab1_233187
+|\
+| *   2869928 Merge pull request #11 from ivana-los/1-remove-a-task-by-name
+| |\
+| | * 46fdbdf (origin/1-remove-a-task-by-name, 1-remove-a-task-by-name) Remove a task by name
+| * |   0acd1c1 Merge pull request #10 from ivana-los/7-count-tasks-per-category
+| |\ \
+| | |/
+| |/|
+| | * c4d162e (origin/7-count-tasks-per-category, 7-count-tasks-per-category) Count tasks per category
+| |/
+* / 1de08c1 (origin/4-sort-tasks-by-priority, 4-sort-tasks-by-priority) Sort tasks by priority
+|/
+* 72d00d4 Add starter code
+* ffba3f3 initial commit

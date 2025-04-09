@@ -1,0 +1,227 @@
+Прва домашна работа
+Прв дел
+1.Ivana@DESKTOP-UUVDJI8 MINGW64 ~
+$ mkdir SI_2025_lab1_233187
+
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~
+$ cd SI_2025_lab1_233187
+
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187
+$ git init
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (master)
+$ git remote add origin https://github.com/ivana-los/SI_2025_lab1_233187.git
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (master)
+$ nano README.md
+$ git add README.md
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (master)
+$ git commit -a -m "Initial commit"
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (master)
+$ nano SI2025Lab1Main.java
+$ git add SI2025Lab1Main.java
+$ git commit -a -m "Add starter code"
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+        SI2025Lab1Main.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (master)
+$ git push origin master
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 1.45 KiB | 370.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ivana-los/SI_2025_lab1_233187.git
+ * [new branch]      master -> master
+Втор дел
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (master)
+$ git fetch
+From https://github.com/ivana-los/SI_2025_lab1_233187
+ * [new branch]      1-remove-a-task-by-name -> origin/1-remove-a-task-by-name
+ * [new branch]      4-sort-tasks-by-priority -> origin/4-sort-tasks-by-priority
+ * [new branch]      7-count-tasks-per-category -> origin/7-count-tasks-per-category
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (master)
+$ git checkout  7-count-tasks-per-category
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (7-count-tasks-per-category)
+$ nano SI2025Lab1Main.java
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (7-count-tasks-per-category)
+$ git add .
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (7-count-tasks-per-category)
+$ git commit -m "Count tasks per category"
+[7-count-tasks-per-category c4d162e] Count tasks per category
+ 1 file changed, 2 insertions(+), 105 deletions(-)
+$ git push origin 7-count-tasks-per-category
+$ git checkout 1-remove-a-task-by-name
+ nano SI2025Lab1Main.java
+$ git add .
+
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (1-remove-a-task-by-name)
+$ git commit -a -m "Remove a task by name"
+$ git push origin 1-remove-a-task-by-name
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (1-remove-a-task-by-name)
+$ git checkout 4-sort-tasks-by-priority
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (4-sort-tasks-by-priority)
+$ nano SI2025Lab1Main.java
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (4-sort-tasks-by-priority)
+$ git add .
+
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (4-sort-tasks-by-priority)
+$ git commit -a -m "Sort tasks by priority"
+[4-sort-tasks-by-priority 1de08c1] Sort tasks by priority
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (4-sort-tasks-by-priority)
+$ git push origin 4-sort-tasks-by-priority
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (4-sort-tasks-by-priority)
+$ git checkout master
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (master)
+$ git merge 4-sort-tasks-by-priority
+Updating 72d00d4..1de08c1
+Fast-forward
+ SI2025Lab1Main.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+se slucuva konflikt
+$ git pull origin master
+$ git push origin master
+$ git log --oneline --graph --all
+*   5e119f1 (HEAD -> master, origin/master, origin/HEAD) Merge branch 'master' of https://github.com/ivana-los/SI_2025_lab1_233187
+|\
+| *   2869928 Merge pull request #11 from ivana-los/1-remove-a-task-by-name
+| |\
+| | * 46fdbdf (origin/1-remove-a-task-by-name, 1-remove-a-task-by-name) Remove a task by name
+Прва домашна работа
+Прв дел
+1.Ivana@DESKTOP-UUVDJI8 MINGW64 ~
+$ mkdir SI_2025_lab1_233187
+
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~
+$ cd SI_2025_lab1_233187
+
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187
+$ git init
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (master)
+$ git remote add origin https://github.com/ivana-los/SI_2025_lab1_233187.git
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (master)
+$ nano README.md
+$ git add README.md
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (master)
+$ git commit -a -m "Initial commit"
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (master)
+$ nano SI2025Lab1Main.java
+$ git add SI2025Lab1Main.java
+$ git commit -a -m "Add starter code"
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+        SI2025Lab1Main.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (master)
+$ git push origin master
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 1.45 KiB | 370.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ivana-los/SI_2025_lab1_233187.git
+ * [new branch]      master -> master
+Втор дел
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (master)
+$ git fetch
+From https://github.com/ivana-los/SI_2025_lab1_233187
+ * [new branch]      1-remove-a-task-by-name -> origin/1-remove-a-task-by-name
+ * [new branch]      4-sort-tasks-by-priority -> origin/4-sort-tasks-by-priority
+ * [new branch]      7-count-tasks-per-category -> origin/7-count-tasks-per-category
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (master)
+$ git checkout  7-count-tasks-per-category
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (7-count-tasks-per-category)
+$ nano SI2025Lab1Main.java
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (7-count-tasks-per-category)
+$ git add .
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (7-count-tasks-per-category)
+$ git commit -m "Count tasks per category"
+[7-count-tasks-per-category c4d162e] Count tasks per category
+ 1 file changed, 2 insertions(+), 105 deletions(-)
+$ git push origin 7-count-tasks-per-category
+$ git checkout 1-remove-a-task-by-name
+ nano SI2025Lab1Main.java
+$ git add .
+
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (1-remove-a-task-by-name)
+$ git commit -a -m "Remove a task by name"
+$ git push origin 1-remove-a-task-by-name
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (1-remove-a-task-by-name)
+$ git checkout 4-sort-tasks-by-priority
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (4-sort-tasks-by-priority)
+$ nano SI2025Lab1Main.java
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (4-sort-tasks-by-priority)
+$ git add .
+
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (4-sort-tasks-by-priority)
+$ git commit -a -m "Sort tasks by priority"
+[4-sort-tasks-by-priority 1de08c1] Sort tasks by priority
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (4-sort-tasks-by-priority)
+$ git push origin 4-sort-tasks-by-priority
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (4-sort-tasks-by-priority)
+$ git checkout master
+Ivana@DESKTOP-UUVDJI8 MINGW64 ~/SI_2025_lab1_233187 (master)
+$ git merge 4-sort-tasks-by-priority
+Updating 72d00d4..1de08c1
+Fast-forward
+ SI2025Lab1Main.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+se slucuva konflikt
+$ git pull origin master
+$ git push origin master
+$ git log --oneline --graph --all
+*   5e119f1 (HEAD -> master, origin/master, origin/HEAD) Merge branch 'master' of https://github.com/ivana-los/SI_2025_lab1_233187
+|\
+| *   2869928 Merge pull request #11 from ivana-los/1-remove-a-task-by-name
+| |\
+| | * 46fdbdf (origin/1-remove-a-task-by-name, 1-remove-a-task-by-name) Remove a task by name
+| * |   0acd1c1 Merge pull request #10 from ivana-los/7-count-tasks-per-category
+| |\ \
+| | |/
+| |/|
+| | * c4d162e (origin/7-count-tasks-per-category, 7-count-tasks-per-category) Count tasks per category
+| |/
+* / 1de08c1 (origin/4-sort-tasks-by-priority, 4-sort-tasks-by-priority) Sort tasks by priority
+|/
+* 72d00d4 Add starter code
+* ffba3f3 initial commit
+$ nano logs.txt
+
+
+
+
